@@ -1,0 +1,141 @@
+/* Global Styles and Variables */
+:root {
+    --bg-color: #f0f0f3;
+    --primary-color: #C41E3A; /* Cardinal Red */
+    --secondary-color: #355E3B; /* Hunter Green */
+    --text-color: #333;
+    --soft-shadow: 8px 8px 16px #e0e0e3, -8px -8px 16px #ffffff;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Centering Container */
+.parent-container, .centered-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Headings */
+h1, h3, h4 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+h3, h4 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+/* Introduction Section */
+.intro {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: var(--soft-shadow);
+    margin: 20px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.6), rgba(225, 225, 230, 0.6));
+    border-radius: 15px;
+    box-shadow: var(--soft-shadow);
+    margin-top: 20px;
+    color: var(--secondary-color);
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: darken(var(--primary-color), 15%);
+}
+
+/* Social Media and Biography Sections */
+.SocialMedia, .bio {
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: var(--soft-shadow);
+    margin: 20px;
+    text-align: center;
+    background-color: var(--bg-color);
+    color: var(--secondary-color);
+}
+
+/* Image in Top Right Corner */
+.phipsi, .headshot {
+    position: absolute;
+    padding: 10px;
+    border-radius: 15px; /* Updated for a softer, rounded appearance */
+    overflow: hidden; /* Ensure the border-radius clips the content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for effects */
+}
+
+.phipsi {
+    top: 0;
+    right: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.headshot {
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Consistent shadow with .phipsi */
+}
+
+.phipsi img, .headshot img {
+    width: 250px; /* Maintain the desired size */
+    height: 250px;
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    border-radius: 15px; /* Rounded corners to match the container */
+}
+
+.phipsi:hover, .headshot:hover {
+    transform: scale(1.25); /* Slight scale on hover for interactivity */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover for depth */
+}
+
+/* Connect with Me Section */
+.connect-with-me {
+    text-align: center;
+    margin-bottom: 15px; /* Space above the links */
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+h2 {
+    text-align: center;
+    color: #C41E3A;
+}
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
